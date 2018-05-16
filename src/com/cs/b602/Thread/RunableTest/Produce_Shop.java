@@ -12,15 +12,15 @@ public class Produce_Shop {
 		synchronized (lock) {
 			try {
 				if(ValueObject.value.equals("")){
-					
 					lock.wait();
 				}
-				
+			
 				System.out.println("getµÄÖµÎª"+ValueObject.value);
 				ValueObject.value="";
 				lock.notify();
 			} catch (InterruptedException e) {
 				// TODO: handle exception
+				System.out.println(e.getMessage());
 			}
 			
 		}

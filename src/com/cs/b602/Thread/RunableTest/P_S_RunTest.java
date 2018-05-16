@@ -5,7 +5,7 @@ package com.cs.b602.Thread.RunableTest;
 
 /**
  * @author Niexiongchao
- *
+ *生产者/消费者模式，进程通信
  */
 public class P_S_RunTest {
 
