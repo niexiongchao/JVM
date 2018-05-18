@@ -18,4 +18,15 @@ interrupt()遇到wait状态的线程，会抛出异常InterruptedException
 
 自动唤醒wait(long):指定特定时间内，如果没有notify，自动唤醒
 
+join()：等待某个进程执行完毕以后，即等待进程销毁。原理：使得当前的线程无限阻塞，调用方法的线程正常执行run()
+应用场景：需要等待某一进程完成，再进行后续操作
 
+join()与interrupt一起会出现InterruptException，原因线程阻塞，再进行打断报错
+
+join(long)与sleep(long)
+join(long)内部由wait(long)实现，要释放锁，时间到了进入就绪队列
+sleep()不释放锁，因此时间到了就直接执行线程
+
+ThreadLocal使用：ThreadLocalRun()
+ThreadLocal存储每一个线程的共享变量，具有隔离性,每个线程的共享变量独立
+ThreadLocal.get()默认为null,乳沟要改变默认值，可以重写initialValue()方法
