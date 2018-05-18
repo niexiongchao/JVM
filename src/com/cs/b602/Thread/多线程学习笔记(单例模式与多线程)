@@ -15,6 +15,8 @@ ThreadSingleRunTest
 反序列化：把字节序列恢复为对象的过程称为对象的反序列化。
 https://blog.csdn.net/qq_27093465/article/details/78544505
 
+5.使用static块实现单例模式，类加载时就加载，编译时就执行static代码块
 
+6.使用enum枚举数据类型实现单例，自动调用构造方法
 
 
